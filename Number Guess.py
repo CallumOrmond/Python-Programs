@@ -23,4 +23,4 @@ while(right == False):
 		print("your got it right!")
 		right = True
 	else:
-		print("try again :(, the number was {correct} \n".format(correct=randomNum))
+		print("try again :( the number was {correct} \n".format(correct=randomNum))
