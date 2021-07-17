@@ -5,6 +5,8 @@ fruits = ["apples", "pineapple", "grapes", "lemon", "watermelon"]
 #Changes List
 print(fruits.sort(), fruits)
 
+
+
 fruits = ["apples", "pineapple", "grapes", "lemon", "watermelon"]
 #Does not chnage list --- Creates returns a new one 
 print(sorted(fruits), fruits)  

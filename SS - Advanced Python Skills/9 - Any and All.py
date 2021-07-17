@@ -14,3 +14,6 @@ fruits_mapped = map(lambda fruit : fruit.startswith("a"), fruits)
 fruits = list(fruits_mapped)
 
 print(any(fruits), all(fruits), " - Better Example")
+
+#NOTES
+#   -Nothing
