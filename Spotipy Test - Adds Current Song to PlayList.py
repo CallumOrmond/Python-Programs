@@ -3,6 +3,8 @@ import pprint
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.oauth2 import SpotifyClientCredentials
 
+#TEST CHANGE
+
 #WORKING 
 
 scope = 'user-top-read user-read-recently-played user-read-playback-state playlist-modify-public playlist-modify-private'
