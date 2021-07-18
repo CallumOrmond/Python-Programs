@@ -1,7 +1,6 @@
-amount = input()
-try:
-    amount = int(amount)
-    
-except:
-    amount = 0
-    print("Invalid - Input has to be number")
+uni = {"a", "b", "c", "d", "e"}
+minus = {"a", "d"}
+minus2 = {"f"}
+
+print(uni - minus)
+print(uni - minus2)
