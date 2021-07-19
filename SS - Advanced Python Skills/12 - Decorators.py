@@ -1,6 +1,6 @@
 #In Python you can pass funtions to other funtions --> Higher Order Funtions
 #Can return functions as well 
-#   Decorators Take a function adds something to it and returns it 
+#Decorators Take a function adds something to it and returns it 
 
 #EXMAPLE 1
 def wrapper(f):
