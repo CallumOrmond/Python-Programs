@@ -13,7 +13,6 @@ style.configure('W.TButton', font =
                 foreground = 'red')
 
 def ButtonPress(Key):
-    print(Key)
     global op
     op += str(Key)
     text.set(op)
@@ -45,7 +44,7 @@ text = tk.StringVar()
 
 
 #TITLE + DISPLAY
-DisplayLbl = tk.Label(root,borderwidth=2,relief="groove", padx=154,pady=16,font=("calibri", 28, "bold"), bg="black",fg="white", textvariable=text).grid(column=0,row=1, columnspan=4)
+DisplayLbl = tk.Label(root,fg="white", padx=16,pady=16,font=("calibri", 28, "bold"), bg="black", textvariable=text).grid(column=0,row=1, columnspan=4, sticky="E")
 
 ##BUTTON GRID##
 
