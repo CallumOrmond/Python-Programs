@@ -1,7 +1,7 @@
 import tkinter as tk
 
 def onKeyPress(event):
-    text.insert('end', 'You pressed %s\n' % (event.char, ))
+    text.insert('end', 'You pressed %s\n' % (event ))
 
 root = tk.Tk()
 root.geometry('300x200')
