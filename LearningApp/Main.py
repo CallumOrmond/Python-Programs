@@ -48,6 +48,7 @@ class HomePage(tk.Frame):
         EnglishZoneBtn = tk.Button(self, text="Click For English", command=lambda: controller.show_frame(EnglishPage)).grid(row=2,column=0)
         MoreBtn = tk.Button(self, text="Test Area").grid(row=3,column=0)
 
+
 class MathsPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self,parent)
@@ -57,6 +58,7 @@ class MathsPage(tk.Frame):
         English_Typing = tk.Button(self, text="Times Tables", command=lambda: controller.show_frame(TimesTablesTimed)).pack()
         Maths_Multiplication_Streak = tk.Button(self, text="Times Table - Streak", command=lambda:controller.show_frame(TimesTablesStreak)).pack()
         BackBtn = tk.Button(self, text="Home", command=lambda: controller.show_frame(HomePage)).pack()
+
 
 class EnglishPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -76,11 +78,21 @@ class TypingMatch(tk.Frame):
         self.pos = 0
         self.Start = False
         self.t = 0
-        self.TEXT_OPTIONS = ["Test rhis is a long text to show"]
+        self.TEXT_OPTIONS = ["Please take your dog, Cali, out for a walk – he really needs some exercise!",
+                            "What a beautiful day it is on the beach, here in beautiful and sunny Hawaii.",
+                            "Rex Quinfrey, a renowned scientist, created plans for an invisibility machine.",
+                            "Do you know why all those chemicals are so hazardous to the environment?",
+                            "You never did tell me how many copper pennies where in that jar; how come?",
+                            "Max Joykner sneakily drove his car around every corner looking for his dog.",
+                            "The two boys collected twigs outside, for over an hour, in the freezing cold!",
+                            "When do you think they will get back from their adventure in Cairo, Egypt?",
+                            "Trixie and Veronica, our two cats, just love to play with their pink ball of yarn.",
+                            "We climbed to the top of the mountain in just under two hours; isn't that great?"]
         self.textLen = 0
 
         self.startTime = 0
         self.endTime = 0
+        self.TimeTaken = 0
 
         #Buttons
         TextTestLbl = tk.Label(self, text="")
@@ -88,11 +100,14 @@ class TypingMatch(tk.Frame):
         self.text = tk.Text(self, font=("calibri", 18, "bold"))
         self.text.grid()
 
-        self.text.insert("end", "testing text - this is for testing poggers C")
+        self.text.insert("end", "Type the letter Highlighted in Green - when you get it it will turn grey and move on - go as fast as you can!")
         self.text.configure(state="disable")
 
         self.ResetBtn = tk.Button(self, text="Click for New text", command=self.Reset)
         self.ResetBtn.grid()
+
+        self.infoLbl = tk.Label(self, text="")
+        self.infoLbl.grid()
 
         
         #Setup
@@ -105,6 +120,7 @@ class TypingMatch(tk.Frame):
         controller.bind('<KeyPress>', self.Keyboard)
 
 
+    #reset/start updating varibles etc.
     def Reset(self):
         self.Start = True
         self.pos = 0
@@ -117,16 +133,24 @@ class TypingMatch(tk.Frame):
         self.text.insert("end", self.t)
         self.text.configure(state="disable")
 
+        self.startTime = 0
+        self.endTime = 0
+        self.TimeTaken = 0
 
+
+    #All function resulting from keyboard input and updating display
     def Keyboard(self, event):
         if self.Start == True:
             
-            self.StartTime = time.time()
+            #Start timer
+            if self.startTime == 0:
+                self.startTime = time.time()               
 
+            #Ingore back space and left shift - Not really need 
             if event.keysym == "BackSpace" or event.keysym == "Shift_L":
                 pass
             else:      
-
+                #get highlight character + validate and move on
                 Character = self.text.get("0.0 + " + str(self.pos) + " chars", "0.0 + " + str(self.pos + 1) + " chars")       
                 if event.char == Character:
                     
@@ -142,15 +166,22 @@ class TypingMatch(tk.Frame):
                     self.pos += 1
 
                     if self.pos == self.textLen:
-                        print("REACHED END")
-                        self.text.tag_add("currentRemove", "0.0 + " + str(self.pos) + " chars")
-                        self.text.tag_configure("currentRemove", background="white")
-                        self.endTime = time.time()
-                        print(self.endTime , self.startTime, self.endTime - self.StartTime)
-                        self.Start = False
+                        self.end_sentance()
 
-       
- 
+    #End typing and display socre + times etc.
+    def end_sentance(self):
+    
+        self.text.tag_add("currentRemove", "0.0 + " + str(self.pos) + " chars")
+        self.text.tag_configure("currentRemove", background="white")
+
+        self.endTime = time.time()
+        self.TimeTaken = self.endTime - self.startTime
+        self.Start = False
+
+        total_words = len(self.t.split())
+        wpm = total_words / (self.TimeTaken / 60)
+        string = "You Took " + str(round(self.TimeTaken, 1)) + " seconds. wpm --> " + str(int(round(wpm, 0))) + " | total words --> " + str(total_words)
+        self.infoLbl.configure(text=string)
 
 
 
