@@ -1,0 +1,38 @@
+Using seed: 1797410758
+Processes to be executed:
+    [#0]: State: ProcessStates.NEW, Arrival: 0.01874985913506718, Service: 0.024082859896149694, Remaining: 0.024082859896149694
+    [#1]: State: ProcessStates.NEW, Arrival: 0.34659969422148434, Service: 0.04939805767338781, Remaining: 0.04939805767338781
+    [#2]: State: ProcessStates.NEW, Arrival: 1.0702461107834187, Service: 8.589090636275131, Remaining: 8.589090636275131
+    [#3]: State: ProcessStates.NEW, Arrival: 1.082379556436702, Service: 2.893534830133524, Remaining: 2.893534830133524
+    [#4]: State: ProcessStates.NEW, Arrival: 1.1636907225178434, Service: 0.20712579697293265, Remaining: 0.20712579697293265
+    [#5]: State: ProcessStates.NEW, Arrival: 1.1763155340637397, Service: 0.12798104125124352, Remaining: 0.12798104125124352
+    [#6]: State: ProcessStates.NEW, Arrival: 1.372802000843104, Service: 0.2428342995239517, Remaining: 0.2428342995239517
+    [#7]: State: ProcessStates.NEW, Arrival: 1.9233807328523982, Service: 2.7156449945284207, Remaining: 2.7156449945284207
+    [#8]: State: ProcessStates.NEW, Arrival: 2.7497838693531627, Service: 1.225013439022086, Remaining: 1.225013439022086
+    [#9]: State: ProcessStates.NEW, Arrival: 3.408243345957417, Service: 4.955566062642633, Remaining: 4.955566062642633
+
+Using seed: 2688744162
+Processes to be executed:
+    [#0]: State: ProcessStates.NEW, Arrival: 0.16327294289381494, Service: 1.2126630374852756, Remaining: 1.2126630374852756
+    [#1]: State: ProcessStates.NEW, Arrival: 0.24085628657883698, Service: 1.0030664748411222, Remaining: 1.0030664748411222
+    [#2]: State: ProcessStates.NEW, Arrival: 1.4583361638682946, Service: 0.5979376023015062, Remaining: 0.5979376023015062
+    [#3]: State: ProcessStates.NEW, Arrival: 1.5627054374610734, Service: 0.8411480864168259, Remaining: 0.8411480864168259
+    [#4]: State: ProcessStates.NEW, Arrival: 1.8117295076376054, Service: 4.345316795486844, Remaining: 4.345316795486844
+    [#5]: State: ProcessStates.NEW, Arrival: 2.0503379721504627, Service: 1.864959607151706, Remaining: 1.864959607151706
+    [#6]: State: ProcessStates.NEW, Arrival: 2.0866714480550264, Service: 2.1117670771129284, Remaining: 2.1117670771129284
+    [#7]: State: ProcessStates.NEW, Arrival: 2.1262568525419177, Service: 2.0524635080504736, Remaining: 2.0524635080504736
+    [#8]: State: ProcessStates.NEW, Arrival: 2.3874624828863755, Service: 2.5947014305782727, Remaining: 2.5947014305782727
+    [#9]: State: ProcessStates.NEW, Arrival: 3.1359956253356143, Service: 1.0114872740395993, Remaining: 1.0114872740395993
+
+Using seed: 3399474557
+Processes to be executed:
+    [#0]: State: ProcessStates.NEW, Arrival: 0.005930213541710191, Service: 4.4839386129296, Remaining: 4.4839386129296
+    [#1]: State: ProcessStates.NEW, Arrival: 0.44239268344700244, Service: 1.1663691985419704, Remaining: 1.1663691985419704
+    [#2]: State: ProcessStates.NEW, Arrival: 0.6221361157180596, Service: 0.32972498456122207, Remaining: 0.32972498456122207
+    [#3]: State: ProcessStates.NEW, Arrival: 1.017754714690284, Service: 0.873947322870889, Remaining: 0.873947322870889
+    [#4]: State: ProcessStates.NEW, Arrival: 1.064892422603134, Service: 7.667055271847057, Remaining: 7.667055271847057
+    [#5]: State: ProcessStates.NEW, Arrival: 1.3794685179090076, Service: 0.24261641981985113, Remaining: 0.24261641981985113
+    [#6]: State: ProcessStates.NEW, Arrival: 1.633799580749315, Service: 0.9993152350772446, Remaining: 0.9993152350772446
+    [#7]: State: ProcessStates.NEW, Arrival: 1.6398513280293314, Service: 2.7320994317866765, Remaining: 2.7320994317866765
+    [#8]: State: ProcessStates.NEW, Arrival: 1.871912791379139, Service: 0.030334733541581848, Remaining: 0.030334733541581848
+    [#9]: State: ProcessStates.NEW, Arrival: 1.93791830913886, Service: 1.2462241788979702, Remaining: 1.2462241788979702

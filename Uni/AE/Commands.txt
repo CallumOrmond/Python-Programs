@@ -1,0 +1,11 @@
+Server Start - python PythonPrograms\AE\2458150O\2458150O\myserver.py 2000
+
+Client list - python PythonPrograms\AE\2458150O\2458150O\myclient.py localhost 2000 list
+
+Client Send Image - python PythonPrograms\AE\2458150O\2458150O\myclient.py localhost 2000 get PythonPrograms/AE/Server/hmm.jpg
+Client Get From Server Image - PythonPrograms\AE\2458150O\2458150O\myclient.py localhost 2000 get PythonPrograms/AE/Server/hmm.jpg
+
+Client Send Empty/Special Char file - python PythonPrograms\AE\2458150O\2458150O\myclient.py localhost 2000 get PythonPrograms/AE/Server/$$$$$.txt
+
+Client Send Large file - python PythonPrograms\AE\2458150O\2458150O\myclient.py localhost 2000 get PythonPrograms/AE/Server/video.mp4
+(takes 12 mins)

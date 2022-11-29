@@ -50,18 +50,18 @@ balls.append(static_ball(space))
 
 #game loop
 while True:
-	 for event in pygame.event.get():
+	for event in pygame.event.get():
 	 	if event.type == pygame.QUIT:
 	 		pygame.quit()
-	 		sys.exit()
+	 	# 	sys.exit()
 
 
-	 screen.fill((217,217,217))
-	 draw_obj(objs)
-	 draw_static_ball(balls)
-	 space.step(1/50)
-	 pygame.display.update() #render the game
-	 clock.tick(120)         #fps = 120
+	screen.fill((217,217,217))
+	draw_obj(objs)
+	draw_static_ball(balls)
+	space.step(1/50)
+	pygame.display.update() #render the game
+	clock.tick(120)         #fps = 120
 
 
 
